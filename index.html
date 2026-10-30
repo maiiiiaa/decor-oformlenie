@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Декор — оформление праздников</title>
+<style>
+:root{--bg:#f8f5f1;--paper:#fffdf9;--ink:#332d2b;--muted:#827773;--rose:#b86e76;--rose2:#f5e5e4;--sage:#748c78;--line:#e9dfd8;--gold:#c49a5a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}
+header{background:var(--paper);border-bottom:1px solid var(--line);padding:18px 6%;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:3}
+.logo{font-family:Georgia,serif;font-size:25px;letter-spacing:1px}.logo span{color:var(--rose)}nav{display:flex;gap:8px;flex-wrap:wrap}nav a{color:var(--ink);text-decoration:none;padding:8px 11px;border-radius:20px;font-size:14px}nav a:hover{background:var(--rose2)}
+.hero{padding:68px 6% 60px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:45px;max-width:1300px;margin:auto}
+.eyebrow{color:var(--rose);font-weight:700;letter-spacing:2px;font-size:12px;text-transform:uppercase}.hero h1{font:normal clamp(38px,5vw,64px)/1.1 Georgia,serif;margin:16px 0}.hero p{color:var(--muted);max-width:540px;font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{border:0;background:var(--rose);color:white;padding:12px 20px;border-radius:6px;text-decoration:none;display:inline-block}.btn.secondary{background:transparent;color:var(--rose);border:1px solid var(--rose)}
+.art{min-height:360px;border-radius:180px 180px 8px 8px;background:linear-gradient(145deg,#e8d2c8,#f4e6df 55%,#d8e0d4);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.art:before,.art:after{content:"";position:absolute;border-radius:50%;border:1px solid #fff9;width:300px;height:300px}.art:after{width:220px;height:220px}
+.flower{font-size:150px;filter:drop-shadow(0 15px 10px #7a5b4b22);z-index:1}.art-label{position:absolute;bottom:22px;left:0;right:0;text-align:center;font:italic 19px Georgia,serif;color:#725c54}
+section.content{padding:58px 6%;max-width:1300px;margin:auto}.section-head{text-align:center;margin:0 auto 30px;max-width:650px}.section-head h2{font:normal 36px Georgia,serif;margin:7px}.section-head p{color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:var(--paper);border:1px solid var(--line);padding:25px;border-radius:9px}.service .icon{font-size:30px}.service h3{font:normal 22px Georgia,serif;margin:12px 0 6px}.service p{color:var(--muted);font-size:14px}.price{color:var(--rose);font-weight:bold;margin-top:15px}
+.booking{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:start}.booking-intro{background:var(--rose2);padding:30px;border-radius:10px}.booking-intro h2{font:normal 32px Georgia,serif;margin:0 0 12px}.booking-intro p{color:#725c54}.form-card{background:var(--paper);border:1px solid var(--line);padding:28px;border-radius:10px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:13px;font-weight:700}.field input,.field select,.field textarea{border:1px solid var(--line);background:white;border-radius:5px;padding:11px;width:100%;color:var(--ink)}.field textarea{min-height:90px;resize:vertical}.form-card .btn{margin-top:18px}.status{display:none;margin-top:15px;padding:12px;background:#edf4ed;color:#3e6b49;border-radius:5px}
+footer{padding:28px 6%;border-top:1px solid var(--line);background:var(--paper);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+@media(max-width:800px){header{align-items:flex-start;flex-direction:column}.hero{grid-template-columns:1fr;padding-top:40px}.art{min-height:280px}.services{grid-template-columns:1fr}.booking{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.section-head h2{font-size:30px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Декор<span>.</span></div>
+  <nav><a href="#services">Услуги</a><a href="#about">О студии</a><a href="#booking">Заявка</a></nav>
+</header>
+<main>
+<section class="hero" id="about">
+  <div>
+    <div class="eyebrow">Декор и оформление мероприятий</div>
+    <h1>Создаём атмосферу, которую хочется запомнить</h1>
+    <p>Оформление дней рождения, свадеб, семейных праздников и небольших мероприятий. Помогаем подобрать стиль, цветовую палитру и декор под ваше событие и бюджет.</p>
+    <div class="actions"><a class="btn" href="#booking">Обсудить оформление</a><a class="btn secondary" href="#services">Посмотреть услуги</a></div>
+  </div>
+  <div class="art"><div class="flower">✿</div><div class="art-label">Красиво — значит с вниманием к деталям</div></div>
+</section>
+<section class="content" id="services">
+  <div class="section-head"><div class="eyebrow">Что мы делаем</div><h2>Услуги студии</h2><p>Выберите формат, а детали и стоимость обсудим индивидуально.</p></div>
+  <div class="services">
+    <article class="service"><div class="icon">🎈</div><h3>День рождения</h3><p>Фотозона, воздушные шары, оформление стола и акцентные детали для домашнего или ресторанного праздника.</p><div class="price">От 8 000 ₽</div></article>
+    <article class="service"><div class="icon">🌿</div><h3>Свадебный декор</h3><p>Оформление церемонии, президиума, гостевых столов и пространства в едином стиле.</p><div class="price">От 25 000 ₽</div></article>
+    <article class="service"><div class="icon">🕯️</div><h3>Семейный праздник</h3><p>Уютный декор для годовщины, baby shower, выписки или другого важного семейного события.</p><div class="price">От 6 000 ₽</div></article>
+  </div>
+</section>
+<section class="content" id="booking">
+  <div class="booking">
+    <div class="booking-intro"><div class="eyebrow">Начнём с идеи</div><h2>Расскажите о вашем событии</h2><p>Заполните форму, чтобы собрать основные пожелания. В этой демонстрационной версии заявка не отправляется на сервер, но форма проверяет обязательные поля и показывает подтверждение.</p><p><strong>Что полезно указать:</strong><br>тип события, дату, число гостей, любимые цвета и примерный бюджет.</p></div>
+    <form class="form-card" id="requestForm">
+      <div class="form-grid">
+        <div class="field"><label for="name">Ваше имя *</label><input id="name" required maxlength="70" placeholder="Как к вам обращаться"></div>
+        <div class="field"><label for="contact">Телефон или email *</label><input id="contact" required maxlength="100" placeholder="Контакт для связи"></div>
+        <div class="field"><label for="event">Тип мероприятия *</label><select id="event" required><option value="">Выберите вариант</option><option>День рождения</option><option>Свадьба</option><option>Семейный праздник</option><option>Корпоратив</option><option>Другое</option></select></div>
+        <div class="field"><label for="date">Дата мероприятия</label><input id="date" type="date"></div>
+        <div class="field"><label for="budget">Примерный бюджет</label><select id="budget"><option>Пока не определён</option><option>До 10 000 ₽</option><option>10 000–30 000 ₽</option><option>30 000–60 000 ₽</option><option>Более 60 000 ₽</option></select></div>
+        <div class="field"><label for="guests">Количество гостей</label><input id="guests" type="number" min="1" max="1000" placeholder="Например, 25"></div>
+        <div class="field full"><label for="details">Пожелания к оформлению</label><textarea id="details" maxlength="1000" placeholder="Цвета, стиль, место проведения и другие идеи"></textarea></div>
+      </div>
+      <button class="btn" type="submit">Подготовить заявку</button>
+      <div class="status" id="status" role="status"></div>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div>© 2026 Декор. Учебный прототип студии оформления.</div><div>Дизайн · Детали · Атмосфера</div></footer>
+<script>
+document.getElementById('requestForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value.trim();
+ const contact=document.getElementById('contact').value.trim();
+ const event=document.getElementById('event').value;
+ if(!name||!contact||!event)return;
+ const status=document.getElementById('status');
+ status.textContent='Спасибо, '+name+'! Демонстрационная заявка на мероприятие «'+event+'» заполнена. Для реального приёма заявок потребуется серверная часть.';
+ status.style.display='block';
+});
+</script>
+</body>
+</html>
